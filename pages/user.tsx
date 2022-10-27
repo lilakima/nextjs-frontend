@@ -16,7 +16,7 @@ const User: NextPage = () => {
                             className="user-name mt-8 font-medium font-semibold text-lg text-mainDark">{userData.name}</div>
                         <div
                             className="user-occupation font-extralight text-xs text-mainDark">{userData.occupation}</div>
-                        <div className="mt-8">
+                        <div className="mt-8 flex flex-col items-center md:items-start">
                             <div className="font-medium font-semibold text-lg text-mainDark my-2">Profile</div>
                             <div className="text-[#475569]/50 my-2">music</div>
                             <div className="text-[#475569]/50 my-2">instrument</div>
