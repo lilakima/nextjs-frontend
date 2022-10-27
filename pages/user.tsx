@@ -1,7 +1,7 @@
 import type {NextPage} from 'next'
 import Template from "../components/shared/Template"
 import {userData} from './constants'
-import { getFirstLetterToUppercaseFromName, getLastLetterToUppercaseFromName } from './userHelper'
+import { getLastLetterToUppercaseFromName } from './userHelper'
 
 const User: NextPage = () => {
     return (
