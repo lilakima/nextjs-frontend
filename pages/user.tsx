@@ -1,6 +1,6 @@
 import type {NextPage} from 'next'
 import Template from "../components/shared/Template"
-import { userData } from './constants'
+import {userData} from './constants'
 
 const User: NextPage = () => {
     return (
@@ -30,11 +30,13 @@ const User: NextPage = () => {
 
                             {
                                 userData.preference
-                                    .map(({id, type}) => <div
-                                            className="my-2 px-2 py-1 border border-slate-200 rounded-md font-semibold text-sm text-[#52525B] bg-[#e5e5e5]/25"
-                                            key={id}>
-                                            {type}
-                                        </div>
+                                    .map(({id, type}) => {
+                                            return <div
+                                                className="my-2 px-2 py-1 border border-slate-200 rounded-md font-semibold text-sm text-[#52525B] bg-[#e5e5e5]/25"
+                                                key={id}>
+                                                {type}
+                                            </div>
+                                        }
                                     )
                             }
                         </div>
@@ -45,13 +47,15 @@ const User: NextPage = () => {
                             <div className="flex flex-wrap overflow-hidden">
                                 {
                                     userData.followedMusicians
-                                        .map(({id, image, name}) => <div className="flex flex-col items-center m-2"
-                                                                key={id}>
-                                            <div
-                                                className="musician-portrait rounded-full w-14 h-14 shadow-md bg-cover bg-center bg-no-repeat"
-                                                style={{backgroundImage: `url("${image}")`}}></div>
-                                            <div className="musician-name text-sm text-[#52525B]">{name}</div>
-                                        </div>)
+                                        .map(({id, image, name}) => {
+                                            return <div className="flex flex-col items-center m-2"
+                                                        key={id}>
+                                                <div
+                                                    className="musician-portrait rounded-full w-14 h-14 shadow-md bg-cover bg-center bg-no-repeat"
+                                                    style={{backgroundImage: `url("${image}")`}}></div>
+                                                <div className="musician-name text-sm text-[#52525B]">{name}</div>
+                                            </div>
+                                        })
                                 }
                             </div>
                         </div>
