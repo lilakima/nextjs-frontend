@@ -1,6 +1,7 @@
 import type {NextPage} from 'next'
 import Template from "../components/shared/Template"
 import {userData} from './constants'
+import { getFirstLetterToUppercaseFromName, getLastLetterToUppercaseFromName } from './userHelper'
 
 const User: NextPage = () => {
     return (
@@ -55,7 +56,7 @@ const User: NextPage = () => {
                                                     <div
                                                         className="musician-portrait rounded-full w-14 h-14 shadow-md bg-cover bg-center bg-no-repeat"
                                                         style={{backgroundImage: `url("${image}")`}}></div>
-                                                    <div className="musician-name text-sm text-[#52525B]">{name}</div>
+                                                    <div className="musician-name text-sm text-[#52525B]">{getLastLetterToUppercaseFromName(name)}</div>
                                                 </div>
                                             )
                                         })
@@ -67,6 +68,6 @@ const User: NextPage = () => {
             </div>
         </Template>
     )
-};
+}
 
 export default User
