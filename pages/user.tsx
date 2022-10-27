@@ -17,10 +17,10 @@ const User: NextPage = () => {
                         <div
                             className="user-occupation font-extralight text-xs text-mainDark">{userData.occupation}</div>
                         <div className="mt-8 flex flex-col items-center md:items-start">
-                            <div className="font-medium font-semibold text-lg text-mainDark my-2">Profile</div>
-                            <div className="text-[#475569]/50 my-2">music</div>
-                            <div className="text-[#475569]/50 my-2">instrument</div>
-                            <div className="text-[#475569]/50 my-2">artist</div>
+                            <div className="font-medium font-semibold text-lg text-mainDark my-2 cursor-pointer">Info</div>
+                            <div className="text-[#475569]/50 my-2 cursor-pointer">music</div>
+                            <div className="text-[#475569]/50 my-2 cursor-pointer">instrument</div>
+                            <div className="text-[#475569]/50 my-2 cursor-pointer">artist</div>
                         </div>
                     </div>
                     <div className="col-span-1 md:col-span-4 lg:col-span-4">
