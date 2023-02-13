@@ -1,4 +1,4 @@
-export const getLastLetterToUppercaseFromName = (name) => {
+export const getLastLetterToUppercaseFromName = (name: string) => {
     if (typeof name !== 'string') {
         return ''
     }
